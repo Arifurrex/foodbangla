@@ -1,0 +1,85 @@
+// ===============================
+// .workdisplay2 sar here
+// ===============================
+.workdisplay2 {
+  padding: 2em 0;
+  .grid-layout {
+    display: grid;
+    gap: 2em;
+    .project {
+      text-decoration: none;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: var(--bs);
+      figure {
+        margin: 0;
+        padding: 0;
+        .project__image {
+          width: 100%;
+          display: block;
+          object-fit: cover;
+          object-position: center;
+          height: 300px;
+        }
+        figcaption {
+          padding: 1em;
+          background: var(--clr-lessradish);
+          color: var(--clr-hashligh);
+          .figcaption__title {
+            margin: 0;
+          }
+          .figcaption__price {
+            margin: 0.5em 0;
+
+            &:after {
+              content: '';
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    .project {
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      margin: 0;
+      &:nth-child(1) {
+        // grid-column: 1/4;
+      }
+      figure {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        text-transform: capitalize;
+        .project__image {
+          position: relative;
+          z-index: 999;
+          transition: transform 0.4s;
+          height: 100%;
+        }
+        figcaption {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 20px;
+          height: 100px;
+          width: 100%;
+        }
+      }
+      &:hover .project__image {
+        transform: translateY(-100px);
+      }
+    }
+  }
+}
+// ===============================
+// .workdisplay2 end here
+// ===============================

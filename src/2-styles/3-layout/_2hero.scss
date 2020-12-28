@@ -1,0 +1,113 @@
+.hero {
+  padding: 4em 0;
+  background: var(--clr-radish, #e7816b);
+  overflow: hidden;
+  .container {
+    // hero__lefside sar here
+    .hero__lefside {
+      @include flex(flex, column, center, center);
+      .hero__header {
+        color: var(--clr-ligh);
+        font-size: 1.5rem;
+        line-height: 1.2;
+        text-align: center;
+      }
+      .hero_paragraph {
+        color: var(--clr-ligh);
+        font-size: 0.75rem;
+        text-align: center;
+      }
+    }
+    // hero_righside sar from here
+    .hero_righside {
+      height: 200px;
+      position: relative;
+      .hero_image {
+        position: absolute;
+        top: -25px;
+      }
+    }
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+  .hero {
+    // padding: 0;
+    background: white;
+    overflow: hidden;
+    .container {
+      background: var(--clr-radish);
+      border-radius: var(--border-radius);
+      padding: 2em 0;
+      height: 100vh;
+      // hero__lefside sar here
+      .hero__lefside {
+        @include flex(flex, column, center, center);
+        max-width: 80%;
+        margin: 0 auto;
+        .hero__header {
+          color: var(--clr-ligh);
+          font-size: 2.5rem;
+          line-height: 1.2;
+          text-align: center;
+        }
+        .hero_paragraph {
+          max-width: 80%;
+          color: var(--clr-ligh);
+          font-size: 0.75rem;
+          text-align: center;
+        }
+      }
+      // hero_righside sar from here
+      .hero_righside {
+        height: 200px;
+        position: relative;
+        .hero_image {
+          position: absolute;
+          top: -100px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-device-width: 1200px) {
+  .hero {
+    background: white;
+    overflow: hidden;
+    padding-bottom: 2em;
+    padding-top: 0;
+    .container {
+      background: var(--clr-radish);
+      border-radius: var(--border-radius);
+      height: 600px;
+      overflow: hidden;
+      @include flex(flex, row, space-between, center);
+      // hero__lefside sar here
+      .hero__lefside > * + * {
+        margin-top: 2em;
+      }
+      .hero__lefside {
+        @include flex(flex, column, center, center);
+        width: 500px;
+        flex-grow: 1;
+        padding: 2em;
+        .hero__header {
+          color: var(--clr-ligh);
+          font-size: 3.5rem;
+        }
+        .hero_paragraph {
+          color: var(--clr-ligh);
+          font-size: 1rem;
+        }
+      }
+      // hero_righside sar from here
+      .hero_righside {
+        width: 500px;
+        position: relative;
+        .hero_image {
+          position: absolute;
+          top: -150px;
+        }
+      }
+    }
+  }
+}

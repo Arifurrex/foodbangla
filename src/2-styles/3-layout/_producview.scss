@@ -1,0 +1,37 @@
+.producview {
+  background-color: var(--clr-radish);
+  width: 90%;
+  margin: 0 auto;
+  color: var(--clr-ligh);
+  border-radius: var(--border-radius);
+  @include flex(flex, row, center, flex-start);
+  flex-wrap: wrap;
+  gap: 1em;
+  overflow: hidden;
+  .producview-leftside {
+    width: 400px;
+    flex-grow: 1;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .producview-righside {
+    width: 400px;
+    flex-grow: 1;
+    padding: 1em 0;
+    .produc__descripion {
+    }
+    .producview--btn1 {
+      background-color: var(--clr-green);
+      color: var(--clr-ligh);
+      margin-right: 1em;
+    }
+    .producview--btn2 {
+      background-color: var(--clr-red);
+      color: var(--clr-ligh);
+    }
+  }
+}

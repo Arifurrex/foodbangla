@@ -1,0 +1,120 @@
+// ==========================
+.profile {
+  @include flex(flex, column, center, center);
+  background: var(--clr-radish);
+  color: var(--clr-ligh);
+  text-transform: capitalize;
+
+  // par one
+  .profile__text {
+    max-width: 500px;
+    padding: 2em 1em;
+    text-align: center;
+    font-weight: var(--fw-ligh);
+  }
+  // par wo
+}
+@media all and (min-width: 768px) {
+  .profile {
+    width: 95%;
+    margin: 0 auto;
+    padding: 4em;
+    // border-radius: var(--border-radius);
+    // par one
+    .profile__text {
+      max-width: 100%;
+      padding: 0em;
+      text-align: left;
+    }
+    // par wo
+    .profile__form {
+      padding: 0em;
+      width: 100%;
+    }
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .profile {
+    @include flex(flex, row, center, center);
+    gap: 2em;
+
+    // par one
+    .profile__text {
+      text-align: left;
+    }
+    // par wo
+    .profile__form {
+      padding: 2em 1em;
+      width: 100%;
+      form {
+        @include flex(flex, column, center, space-between);
+        .from-control {
+          margin-top: 1em;
+          input:focus {
+            outline: none;
+          }
+          input[type='text'],
+          input[type='email'] {
+            background: var(--clr-radish);
+            color: var(--clr-ligh);
+            border: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.589);
+            width: 100%;
+            padding: 1em;
+            font-size: 1rem;
+            font-size: clamp(0.85rem, calc(3vw+1rem), 1rem);
+            font-weight: var(--var-ligh);
+            text-transform: capitalize;
+          }
+
+          &:nth-last-child(1) {
+            align-self: flex-end;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+.search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #192a56;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+}
+.search-box:hover > .search-tex {
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+  background: white;
+}
+.search-btn {
+  color: #44bd32;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.search-tex {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0;
+}

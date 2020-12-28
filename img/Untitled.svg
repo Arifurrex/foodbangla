@@ -1,0 +1,21 @@
+<svg width="1448" height="881" viewBox="0 0 1448 881" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)" filter="url(#filter0_d)">
+<rect width="1440" height="873" transform="translate(4)" fill="white"/>
+<path d="M623 383C623 357.043 644.043 336 670 336H1540C1565.96 336 1587 357.043 1587 383V875C1587 900.957 1565.96 922 1540 922H670C644.043 922 623 900.957 623 875V383Z" fill="#F4F4F4"/>
+<ellipse cx="704" cy="629" rx="327" ry="293" fill="#F4F4F4"/>
+</g>
+<defs>
+<filter id="filter0_d" x="0" y="0" width="1448" height="881" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<clipPath id="clip0">
+<rect width="1440" height="873" fill="white" transform="translate(4)"/>
+</clipPath>
+</defs>
+</svg>

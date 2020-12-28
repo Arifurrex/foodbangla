@@ -1,0 +1,50 @@
+.work-cards {
+  padding: 2em 0;
+
+  .card {
+    width: 300px;
+    flex-grow: 1;
+    padding: 3em 0;
+    border-radius: 1em;
+    color: var(--clr-ligh);
+    text-transform: capitalize;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgb(171, 169, 175);
+    box-shadow: var(--bs);
+    transition: all 0.75s ease-out;
+    .card__title {
+      font-size: 3rem;
+      font-size: clamp(2.75rem, calc(3vw + 1rem), 3rem);
+      transition: all 0.75s ease-out;
+    }
+    .card--btn {
+      background-color: transparent;
+      color: var(--clr-whie);
+      transition: all 0.75s ease-out;
+    }
+  }
+  .card1 {
+    grid-area: card--one;
+    background-image: url(http://unsplash.it/400);
+  }
+  .card2 {
+    grid-area: card--two;
+    background-image: url(http://unsplash.it/300);
+  }
+  .card3 {
+    grid-area: card--three;
+    background-image: url(http://unsplash.it/250);
+  }
+}
+@media (min-width: 800px) {
+  //   .cards {
+  //     grid-template-columns: repeat(2, 1fr);
+  //     grid-template-rows: repeat(2, 1fr);
+  //     grid-template-areas:
+  //       'card--one  card--two'
+  //       'card--one card--three';
+  //   }
+}

@@ -1,0 +1,35 @@
+@media screen and (min-width: 1200px) {
+  .home-leaf {
+    position: relative;
+  }
+  .home-leaf::after {
+    content: '';
+    position: absolute;
+    top: 1400px;
+    right: -164px;
+    bottom: unset;
+    left: unset;
+    width: 1006px;
+    height: 594px;
+    background: url(/assets/shared/desktop/bg-pattern-leaf.svg);
+    z-index: -2;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    overflow: hidden;
+  }
+  .hero-leaf {
+    position: relative;
+  }
+  .hero-leaf::before {
+    content: '';
+    position: absolute;
+    top: 323px;
+    right: unset;
+    bottom: unset;
+    left: -164px;
+    width: 1006px;
+    height: 594px;
+    background: url(/assets/shared/desktop/bg-pattern-leaf.svg);
+    z-index: -2;
+  }
+}

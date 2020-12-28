@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --ff-primary: 'Heebo', sans-serif;
+  --ff-secondary: 'Source Sans Pro', sans-serif;
+  --fw-ligh: 200;
+  --fw-reg: 400;
+  --fw-bold: 700;
+  --fw-bolder: 900;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --clr-ligh: #fefeff;
+  --clr-red: #d7385e;
+  --clr-green: #5aa469;
+  --clr-radish: #583d72;
+  --clr-subradish: #9f5f80;
+  --clr-lessradish: #ffe5e0;
+  --clr-dark: #1d1d1f;
+  --clr-hash: #68686a;
+  --clr-hashligh: #3c3c3e;
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  --border-radius: 1.3rem;
+}
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}

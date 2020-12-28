@@ -1,0 +1,119 @@
+.whoweare {
+  padding: 2em 0;
+
+  .container {
+    .whoweare__card {
+      margin-bottom: 2em; //dele i
+      @include flex(flex, column, center, center);
+      .whoweare__image--container {
+        &::before {
+          position: absolute;
+          content: '';
+          height: 220px;
+          width: 220px;
+          background-image: linear-gradient(-229deg, var(--clr-radish), white);
+          border-radius: 50%;
+          z-index: 1;
+        }
+        .whoweare__image {
+          height: 220px;
+          width: 220px;
+          z-index: 2;
+          position: relative;
+        }
+      }
+      .whoweare__desc {
+        margin-top: 3em;
+        text-align: center;
+        .whoweare__title {
+          font-size: 1.4rem;
+          font-size: clamp(0.75rem, calc(3vw+1rem), 1.4rem);
+          letter-spacing: 0.12em;
+          font-weight: var(--fw-reg);
+        }
+        .whoweare__paragraph {
+          font-size: 1rem;
+          font-size: clamp(0.75rem, calc(3vw+1rem), 1rem);
+        }
+      }
+    }
+  }
+}
+// media query for tablat
+@media all and (min-width: 768px) and (max-width: 1200px) {
+  .whoweare {
+    padding: 2em 0;
+    .container {
+      .whoweare__card {
+        @include flex(flex, row, space-between, center);
+        gap: 2em;
+        // par one
+        .whoweare__image--container {
+          flex: 1;
+          // border: 1px solid red;
+          &::before {
+            position: absolute;
+            content: '';
+
+            border-radius: 50%;
+            z-index: 1;
+          }
+          .whoweare__image {
+            z-index: 2;
+
+            position: relative;
+          }
+        }
+        // par wo
+        .whoweare__desc {
+          margin-top: 0;
+          text-align: left;
+          flex: 2;
+          .whoweare__title {
+            letter-spacing: 0.5em;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+// for large screen
+@media all and (min-width: 1200px) {
+  .whoweare {
+    padding: 2em 0;
+
+    .container {
+      @include flex(flex, row, space-between, center);
+      gap: 2em;
+      .whoweare__card {
+        margin-bottom: 0em;
+        @include flex(flex, column, center, center);
+
+        .whoweare__image--container {
+          &::before {
+            position: absolute;
+            content: '';
+            height: 220px;
+            width: 220px;
+            border-radius: 50%;
+            z-index: 1;
+          }
+          .whoweare__image {
+            height: 220px;
+            width: 220px;
+            z-index: 2;
+            position: relative;
+          }
+        }
+        .whoweare__desc {
+          margin-top: 3em;
+          text-align: center;
+          .whoweare__title {
+            letter-spacing: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}

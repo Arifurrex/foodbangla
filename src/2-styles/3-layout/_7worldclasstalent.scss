@@ -1,0 +1,43 @@
+.worldclasstalent {
+  padding: 2em 0;
+
+  .flex-wrap {
+    //when u will use flex-wrap use flex-grow:1 and width: ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+
+    background: var(--clr-ligh);
+    border-radius: 10px;
+    overflow: hidden;
+    .worldclasstalent__image {
+      width: 400px;
+      flex-grow: 1;
+      display: block;
+      object-position: center;
+      object-fit: cover;
+
+      @media (min-width: 1140px) {
+        order: 2;
+      }
+    }
+    .worldclasstalent__descrip-container {
+      .worldclasstalent__title {
+        margin-bottom: 1em;
+      }
+      text-align: left;
+      width: 500px;
+      flex-grow: 1;
+      padding: 2em;
+      text-transform: capitalize;
+      .worldclasstalent__title {
+        color: var(--clr-radish);
+      }
+      .worldclasstalent__descrip {
+        color: var(--clr-hash);
+      }
+    }
+  }
+}

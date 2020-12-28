@@ -1,0 +1,118 @@
+.contact__text--modifierforinsert {
+  .contact--writtingmode {
+    writing-mode: vertical-lr;
+    min-width: 200px;
+    color: var(--clr-radish);
+    text-shadow: var(--bs);
+  }
+}
+.decoreform {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  border-radius: var(--border-radius);
+  background: var(--clr-radish);
+  box-shadow: var(--bs);
+  .form-left-decoration,
+  .form-right-decoration {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background: var(--clr-lessradish);
+  }
+  .form-left-decoration {
+    bottom: 60px;
+    left: -30px;
+  }
+  .form-right-decoration {
+    top: 60px;
+    right: -30px;
+  }
+  .form-left-decoration:before,
+  .form-left-decoration:after,
+  .form-right-decoration:before,
+  .form-right-decoration:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    border-radius: var(--border-radius);
+    background: var(--clr-radish);
+    box-shadow: var(--bs);
+  }
+  .form-left-decoration:before {
+    top: -20px;
+  }
+  .form-left-decoration:after {
+    top: 20px;
+    left: 10px;
+  }
+  .form-right-decoration:before {
+    top: -20px;
+    right: 0;
+  }
+  .form-right-decoration:after {
+    top: 20px;
+    right: 10px;
+  }
+  .circle {
+    position: absolute;
+    bottom: 80px;
+    left: -55px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr-lessradish);
+  }
+  .form-inner {
+    padding: 40px;
+  }
+  .form-inner input,
+  .form-inner textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    // border-radius: var(--border-radius);
+    border-radius: 10px;
+    background: var(--clr-ligh);
+    font-family: var(--ff-secondary);
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: var(--ff-secondary);
+    color: var(--clr-hash);
+    opacity: 1; /* Firefox */
+    text-transform: capitalize;
+  }
+  .form-inner textarea {
+    resize: none;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: var(--border-radius);
+    border: none;
+    border-bottom: 4px solid var(--clr-lessradish);
+    background: var(--clr-radish);
+    font-size: 16px;
+    font-weight: var(--fw-bolder);
+    color: var(--clr-ligh);
+    cursor: pointer;
+    box-shadow: var(--bs);
+  }
+  button:hover {
+    background: var(--clr-lessradish);
+    color: var(--clr-dark);
+  }
+}
+
+@media (min-width: 568px) {
+  form {
+    width: 60%;
+  }
+}

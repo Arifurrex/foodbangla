@@ -1,0 +1,96 @@
+.locations > * + * {
+  margin-top: 3em;
+}
+.location {
+  @include flex(flex, column, center, center);
+
+  .location__description-wrapper {
+    @include flex(flex, column, center, center);
+    padding: 4em 0;
+    width: 100%;
+    background-color: #fdf3f0;
+    color: var(--clr-dark);
+    text-align: center;
+    .location__description-header {
+      text-transform: capitalize;
+      color: var(--clr-radish);
+    }
+    .location__description {
+      line-height: 1;
+      .location-office {
+        margin-top: 1em;
+        p:nth-child(1) {
+          font-weight: var(--fw-bolder);
+        }
+      }
+      .location-contact {
+        margin-top: 1em;
+        p:nth-child(1) {
+          font-weight: var(--fw-bolder);
+        }
+      }
+    }
+  }
+  .location-image {
+    background-image: url(../../../assets/locations/tablet/image-map-canada.png);
+    background-size: cover;
+    background-position: center;
+    height: 334px;
+    width: 100%;
+  }
+}
+//  for table
+@media all and (min-width: 1024px) {
+  .location {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1150px;
+    @include flex(flex, column, center, center);
+    flex-direction: column-reverse;
+    gap: 2em;
+    margin-bottom: 6em;
+  }
+  .location > * {
+    border-radius: 10px;
+  }
+}
+//  for destop
+@media all and (min-width: 1200px) {
+  .location {
+    width: 80%;
+    margin: 0 auto;
+    @include flex(flex, row, center, center);
+    flex-direction: row !important;
+    gap: 2em;
+    margin-bottom: 2em;
+  }
+  .location > * {
+    border-radius: 10px;
+  }
+  .location__description-wrapper {
+    padding: 0;
+    flex: 2;
+
+    .location__description-header {
+      width: 80%;
+      text-align: left;
+    }
+    .location__description {
+      width: 80%;
+      @include flex(flex, row, space-between, flex-start);
+      gap: 1em;
+      .location-office {
+        text-align: left;
+      }
+      .location-contact {
+        text-align: left;
+      }
+    }
+  }
+  .location-image {
+    flex: 1;
+  }
+  .location:nth-child(2) > .location__description-wrapper {
+    order: 2;
+  }
+}
